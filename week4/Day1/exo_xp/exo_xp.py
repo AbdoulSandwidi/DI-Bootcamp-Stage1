@@ -1,5 +1,5 @@
 #Exercice 1
-print("Hello world\nHello world\nHello world\nHello world\n\n")
+print(4*"Hello world\n")
 
 #Exercice 2 (Calcul de 99 à la puissance de 3 fois 8)
 
@@ -60,8 +60,8 @@ else:
 	print("Nous avons des noms differents\n\n")
 
 # Exercice 9 : Assez Grand Pour Monter Sur Des Montagnes Russes
-pouce = int(input("Entrez votre pouce:\t"))
-if pouce > 145:
+pouce = float(input("Entrez votre pouce:\t"))
+if 2.54*pouce > 145:
 	print("Vous etes assez grand pour rouler!\n\n")
 else:
 	print("Vous devez grandir un peu plus!\n\n")
