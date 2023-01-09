@@ -1,11 +1,14 @@
 # Exercice 1
-"""
+print("=======================Exercice 1=========================")
+
 keys = ['Ten', 'Twenty', 'Thirty']
 values = [10, 20, 30]
 
 dictionary = dict(zip(keys, values))
 
 print(dictionary)
+
+print("=======================Exercice 2=========================")
 
 # Exercise 2
 # Question 1)
@@ -49,8 +52,9 @@ while i == 1:
 	family1.update({nom1: age1})
 	i = int(input("Taper 1 pour ajouter un membre:"))
 print(family1)
-"""
-"""
+
+print("=======================Exercice 3=========================")
+
 brand = {"name": "Zara",
 		"creation_date": 1975,
 		"creator_name": "Amancio Ortega Gaona",
@@ -111,10 +115,10 @@ brand.update(more_on_zara)
 print(f"\nLe nombre actuel de magazins: \t{brand['number_stores']}")
 # constat : Le nombre de magazin a ete mise a jour
 print("\nConstat : Le nombre de magazin a ete mise a jour")
-"""
+
 
 # Exercice 4
-print("=======================Exercice 9=========================")
+print("=======================Exercice 4=========================")
 
 users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
 # Question 1)
@@ -127,7 +131,7 @@ print("\nDictionnaire 1:\n\t",dico1)
 dico2 = {}
 for i in users:
 	dico2[users.index(i)] = i
-print("\nDictionnaire 2:\n\t",dico2)
+print("\nDictionnaire 2 :\n\t",dico2)
 
 # Question 3)
 dico3 = {}
@@ -151,10 +155,3 @@ for elem in users:
 	if elem[0] == "M"or elem[0] == "P":
 		dico4[elem] = users.index(elem)
 print("\nDictionnaire 5:\n\t", dico4)
-
-"""
-Alpha = ['A','B','C','D','E']
-elem = {i:j for i,j in zip(Alpha, users)}
-for i in elem :
-	print(f"{i} -- {elem[i]}")
-"""
