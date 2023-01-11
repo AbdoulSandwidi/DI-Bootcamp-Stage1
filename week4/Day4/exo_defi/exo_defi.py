@@ -1,4 +1,3 @@
-
 matrice=[["7", "i", "3"],
         ["T", "s", "i"],
         ["h"," %", "x"],
@@ -7,7 +6,6 @@ matrice=[["7", "i", "3"],
         [" $", "a", " "],
         ["#", "t", "%"],
         ["^", "r", "!"]]
-
 
 def affich_matrice(matrice):
     liste=[]
@@ -30,7 +28,6 @@ def affich_matrice(matrice):
     print(liste)
     return liste
 
-
 liste = affich_matrice(matrice)
 
 def formation_du_mot(liste):
@@ -39,6 +36,4 @@ def formation_du_mot(liste):
     return mot
 
 mot = formation_du_mot(liste)
-
-
 print("Le texte contenu dans la matrice:\n\t", mot)

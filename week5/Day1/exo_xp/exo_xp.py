@@ -1,67 +1,74 @@
-#Exercice 1
-print(4*"Hello world\n")
+print("\n======================== Exercice 1 ========================\n")
+class Cat:
+    def __init__(self, cat_name, cat_age):
+        self.name = cat_name
+        self.age = cat_age
 
-#Exercice 2 (Calcul de 99 à la puissance de 3 fois 8)
+#Question 1)
+chat1 = Cat("Milou", 2)
+chat2 = Cat("chamss", 3)
+chat3 = Cat("Milou", 4)
 
-resultat= (99**3) * 8
-print("resultat:",resultat,"\n\n")
+liste = [chat1, chat2, chat3]
+def chat_age(liste_chat):
+	liste_age = [chat.age for chat in liste_chat]
+	print("liste age = ",liste_age)
+	for chat in liste_chat:
+		if chat.age == max(liste_age):
+			return chat
 
-#Exercice 3
-# Sortie des extraits de codes suivants:
+vieux_chat = chat_age(liste)
+print(f"Le chat le plus âgé est {vieux_chat.name} et a {vieux_chat.age} années.")
 
-#>>> 5 < 3
-print("False")
+# Exercice 2 : Chiens
+print("\n======================== Exercice 2 ========================\n")
 
-#>>> 3 == 3
-print("True")
+class Dog:
+	"""docstring for Dog"""
+	def __init__(self, name, height):
+		self.name = name
+		self.height = height
 
-#>>> 3 == "3"
-print("False")
+	def bark(self):
+		print(f"\t\t{self.name} goes woof!")
 
-#>>> "3" > 3
-print("Il y'aura un TypeError")
+	def jump(self):
+		print(f"\t\t{self.name} saute {2*self.height} cm de haut!")
 
-#>>> "Hello" == "hello"
-print("False\n\n")
+davids_dog = Dog("Rex", 50)
 
-# Exercice 4 : La Marque De Votre Ordinateur
+print(f"\t\tNom du chien de David:\t{davids_dog.name}\n\t\tHauteur du chien:\t{davids_dog.height}cm")
+print("\n			************		\n")
 
-computer_brand= "HP"
-print(f"I have a <{computer_brand}> computer\n\n")
+davids_dog.bark()
+davids_dog.jump()
 
-# Exercice 5 : Vos Informations
+print("\n			************		\n")
 
-name= "SANDWIDI"
-age= 25
-shoe_size=41
-info = f"Mr {name} a {age} ans et la pointure de sa chaussure est {shoe_size}"
-print(info,"\n\n")
-# L'execution a ete faite
+sarahs_dog = Dog("Teacup ", 20)
+print(f"\t\tNom du chien de David:\t{sarahs_dog.name}\n\t\tHauteur du chien:\t{sarahs_dog.height}cm")
+print("\n			************		\n")
+sarahs_dog.bark()
+sarahs_dog.jump()
 
-# Exercice 6 : A & B
-A = 12
-B = 8
-if A > B :
-	print("Hello World\n A > B\n\n")
+print("\n			************			\n")
 
-# Exercice 7 : Impair Ou Pair
-nombre= int(input("Entrer un nombre pour verifier sa  parite:\t "))
-if not(nombre%2):
-	print(f"{nombre} est un nombre pair\n\n")
-else:
-	print(f"{nombre} est un nombre impair\n\n")
+if davids_dog.height > sarahs_dog.height :
+	print(f"\t\t{davids_dog.name} est le plus grand chien")
+else :
+	print(f"\t\t{sarahs_dog.name} est le plus grand chien")
 
-# Exercice 8 : Comment T’appelles-Tu ?
-nom= input("Comment t'appelles-tu?\t")
-nom= nom.upper()
-if nom == "SANDWIDI":
-	print("Ahh! Nous avons donc le meme nom!\n\n")
-else:
-	print("Nous avons des noms differents\n\n")
+#Exercice 3 : Qui Est Le Producteur De La Chanson ?
+print("\n======================== Exercice 3 ========================\n")
+class Song():
+	"""docstring for Song"""
+	def __init__(self, lyrics):
+		self.lyrics = lyrics
 
-# Exercice 9 : Assez Grand Pour Monter Sur Des Montagnes Russes
-pouce = float(input("Entrez votre pouce:\t"))
-if 2.54*pouce > 145:
-	print("Vous etes assez grand pour rouler!\n\n")
-else:
-	print("Vous devez grandir un peu plus!\n\n")
+	def sing_me_a_song(self):
+		for element in self.lyrics :
+			print("\t\t",element)
+
+stairway= Song(["There’s a lady who's sure","all that glitters is gold", "and she’s buying a stairway to heaven"])
+
+stairway.sing_me_a_song()

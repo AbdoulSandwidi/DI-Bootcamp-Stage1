@@ -1,23 +1,11 @@
-#Défi 1
-# Question 1)
-number = int(input("Entrer un entier pour obtenir ses multiples:\t"))
-length = int(input("Entrer le nombre de multiples desires:\t"))
+class Farm():
+	"""docstring for Farm"""
+	def __init__(self, Nom_fermier):
+		self.Nom_fermier = Nom_fermier
 
-# Question 2)
-i=1
-
-liste = []
-while i <= length :
-	liste.append(number*i)
-	i += 1
-print(liste)
-
-
-#Défi 2
-# Question 2)
-chaine = input("Entrer une chaine:")
-chaine = chaine.lower()
-reduit = chaine
-for i in chaine:
-	reduit = reduit.replace(i+i,i)
-print(reduit)
+macdonald = Farm("McDonald")
+# macdonald.add_animal('cow',5)
+# macdonald.add_animal('sheep')
+# macdonald.add_animal('sheep')
+# macdonald.add_animal('goat', 12)
+print(macdonald.get_info())
